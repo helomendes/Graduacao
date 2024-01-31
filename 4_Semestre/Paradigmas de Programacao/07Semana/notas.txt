@@ -1,0 +1,15 @@
+arraylist não remove elementos duplicados
+começa com um tamanho fixo, que vai aumentando conforme necessário
+
+linkedlist
+lista encadeada
+LinkedList<T> lista = new LinkedList<T>();
+LinkedList<T> lista = new LinkedList<T>(x); -> capacidade inicial da lista
+add, remove, get, ...
+addFirst, addLast
+getFirst, getLast
+removeFirst, removeLast
+
+custo pra iserção, remoção e iteração
+LinkedList é mais rápida pra inserção (add) e iteração
+ArrayList melhor com acesso com indice (get)

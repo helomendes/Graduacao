@@ -1,0 +1,10 @@
+.section .data
+    v: .quad 10, 30, 5, 10, 50
+.section .text
+.global _start
+_start:
+    movq $v, %rax
+    addq $16, %rax
+    movq (%rax), %rdi
+    movq $60, %rax
+    syscall

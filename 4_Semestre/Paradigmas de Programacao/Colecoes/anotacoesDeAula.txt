@@ -1,0 +1,34 @@
+COLEÇÕES
+implementam estruturas de dados que armazenam qualquer tipo de objeto
+não aceitam tipos primitivos como elementos
+para guardar tipos primitivos devemos usar as classes wrapper
+
+LISTAS
+é uma Collection que pode conter elementos duplicados
+mantém uma ordenação específica entre os elementos
+resolve os problemas em relação ao array (busca, remoção, tamanho, ...)
+a interface List é implementada por várias classes
+
+ARRAYLIST
+implementado como um array
+acesso sequencial e aleatório extremamente rápido
+pode ser redimensionado dinamicamente -> aumenta em 50% o tamanho da lista
+não é uma lista de arrays
+internamento, usa um array encapsulado como estrutura para armazenar os dados
+ArrayList<T> a = new ArrayList<T>();
+ArrayList<T> a = new ArrayList<T>(20); -> capacidade inicial da lista
+capacidade != tamanho
+List<T> a = new ArrayList<T>();
+Collection<T> a = new ArrayList<T>();
+a.add(p) ou a.add(0, p) -> posição na lista
+a.remove(indice)
+a.get(indice)
+a.size()
+    Iterator<T> i = a.iterator();
+    while(i.hasNext()) {
+        System.out.println(i.next());
+    }
+
+    for(<Tipo> <identificador> : <array ou colecao>) {
+        <comando>
+    }

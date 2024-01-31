@@ -1,0 +1,14 @@
+POLIMORFISMO
+
+Polimorfismo Universal:
+	ocorre em tempo de execução e trabalha em um conjunto infinito de tipos
+	Inclusão:
+		por meio de uma referência para interfaces ou superclasses, é possível abordar um conjunto amplo de tipos de objetos
+		se um Cachorro é um Animal, o polimorfismo de inclusão diz que uma variável do tipo Animal pode guardar um objeto do tipo Cachorro.
+	Paramétrico
+
+Polimorfismo Ad Hoc:
+	ocorre em tempo de compilação e trabalha em um conjunto finito de tipos
+	Sobrecarga:
+		métodos 
+	Coerção
