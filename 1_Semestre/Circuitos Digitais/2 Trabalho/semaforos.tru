@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<truthTable>
+  <variables>
+    <variable name="E0^n"/>
+    <variable name="E1^n"/>
+    <variable name="E2^n"/>
+    <variable name="B"/>
+  </variables>
+  <results>
+    <result>
+      <name>E0^{n+1}</name>
+      <values class="BoolTable">0101010111001000</values>
+    </result>
+    <result>
+      <name>E1^{n+1}</name>
+      <values class="BoolTable">0010110100001100</values>
+    </result>
+    <result>
+      <name>E2^{n+1}</name>
+      <values class="BoolTable">1001100111001100</values>
+    </result>
+    <result>
+      <name>S0</name>
+      <values class="BoolTable">0011111111111111</values>
+    </result>
+    <result>
+      <name>S1</name>
+      <values class="BoolTable">1100111100111111</values>
+    </result>
+    <result>
+      <name>S2</name>
+      <values class="BoolTable">1111001111111111</values>
+    </result>
+    <result>
+      <name>S3</name>
+      <values class="BoolTable">1111110011110011</values>
+    </result>
+    <result>
+      <name>S4</name>
+      <values class="BoolTable">1111111111001100</values>
+    </result>
+  </results>
+</truthTable>
