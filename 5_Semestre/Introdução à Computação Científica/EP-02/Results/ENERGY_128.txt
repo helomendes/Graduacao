@@ -1,0 +1,128 @@
+STRUCT,Info,3
+CPU name:,Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz,
+CPU type:,Intel Coffeelake processor,
+CPU clock:,3.40792871 GHz,
+TABLE,Region multMatVet_Otimizada,Group 1 Raw,ENERGY,8
+Region Info,Core 3,
+RDTSC Runtime [s],0.000010,
+call count,1,
+Event,Counter,Core 3
+INSTR_RETIRED_ANY,FIXC0,13377
+CPU_CLK_UNHALTED_CORE,FIXC1,49642
+CPU_CLK_UNHALTED_REF,FIXC2,48138
+TEMP_CORE,TMP0,205
+PWR_PKG_ENERGY,PWR0,0
+PWR_PP0_ENERGY,PWR1,0.0007
+PWR_PP1_ENERGY,PWR2,0
+PWR_DRAM_ENERGY,PWR3,0
+TABLE,Region multMatVet_Otimizada,Group 1 Metric,ENERGY,13
+Metric,Core 3,
+Runtime (RDTSC) [s],1.007580e-05,
+Runtime unhalted [s],1.456662e-05,
+Clock [MHz],3514.4044,
+CPI,3.7110,
+Temperature [C],205,
+Energy [J],0,
+Power [W],0,
+Energy PP0 [J],0.0007,
+Power PP0 [W],72.6912,
+Energy PP1 [J],0,
+Power PP1 [W],0,
+Energy DRAM [J],0,
+Power DRAM [W],0,
+STRUCT,Info,3
+CPU name:,Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz,
+CPU type:,Intel Coffeelake processor,
+CPU clock:,3.40792871 GHz,
+TABLE,Region multMatMat_Otimizada,Group 1 Raw,ENERGY,8
+Region Info,Core 3,
+RDTSC Runtime [s],0.000498,
+call count,1,
+Event,Counter,Core 3
+INSTR_RETIRED_ANY,FIXC0,3226322
+CPU_CLK_UNHALTED_CORE,FIXC1,1682272
+CPU_CLK_UNHALTED_REF,FIXC2,1641946
+TEMP_CORE,TMP0,206
+PWR_PKG_ENERGY,PWR0,0.0067
+PWR_PP0_ENERGY,PWR1,0.0038
+PWR_PP1_ENERGY,PWR2,0
+PWR_DRAM_ENERGY,PWR3,0.0006
+TABLE,Region multMatMat_Otimizada,Group 1 Metric,ENERGY,13
+Metric,Core 3,
+Runtime (RDTSC) [s],0.0005,
+Runtime unhalted [s],0.0005,
+Clock [MHz],3491.6270,
+CPI,0.5214,
+Temperature [C],206,
+Energy [J],0.0067,
+Power [W],13.3541,
+Energy PP0 [J],0.0038,
+Power PP0 [W],7.7184,
+Energy PP1 [J],0,
+Power PP1 [W],0,
+Energy DRAM [J],0.0006,
+Power DRAM [W],1.2252,
+STRUCT,Info,3
+CPU name:,Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz,
+CPU type:,Intel Coffeelake processor,
+CPU clock:,3.40792871 GHz,
+TABLE,Region multMatVet,Group 1 Raw,ENERGY,8
+Region Info,Core 3,
+RDTSC Runtime [s],0.000016,
+call count,1,
+Event,Counter,Core 3
+INSTR_RETIRED_ANY,FIXC0,60611
+CPU_CLK_UNHALTED_CORE,FIXC1,66501
+CPU_CLK_UNHALTED_REF,FIXC2,64752
+TEMP_CORE,TMP0,207
+PWR_PKG_ENERGY,PWR0,0.0067
+PWR_PP0_ENERGY,PWR1,0.0005
+PWR_PP1_ENERGY,PWR2,0
+PWR_DRAM_ENERGY,PWR3,0.0005
+TABLE,Region multMatVet,Group 1 Metric,ENERGY,13
+Metric,Core 3,
+Runtime (RDTSC) [s],1.608290e-05,
+Runtime unhalted [s],1.951361e-05,
+Clock [MHz],3499.9794,
+CPI,1.0972,
+Temperature [C],207,
+Energy [J],0.0067,
+Power [W],413.6587,
+Energy PP0 [J],0.0005,
+Power PP0 [W],34.1553,
+Energy PP1 [J],0,
+Power PP1 [W],0,
+Energy DRAM [J],0.0005,
+Power DRAM [W],34.1553,
+STRUCT,Info,3
+CPU name:,Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz,
+CPU type:,Intel Coffeelake processor,
+CPU clock:,3.40792871 GHz,
+TABLE,Region multMatMat,Group 1 Raw,ENERGY,8
+Region Info,Core 3,
+RDTSC Runtime [s],0.002222,
+call count,1,
+Event,Counter,Core 3
+INSTR_RETIRED_ANY,FIXC0,9459054
+CPU_CLK_UNHALTED_CORE,FIXC1,7675637
+CPU_CLK_UNHALTED_REF,FIXC2,7491352
+TEMP_CORE,TMP0,207
+PWR_PKG_ENERGY,PWR0,0.0105
+PWR_PP0_ENERGY,PWR1,0.0120
+PWR_PP1_ENERGY,PWR2,0
+PWR_DRAM_ENERGY,PWR3,0.0010
+TABLE,Region multMatMat,Group 1 Metric,ENERGY,13
+Metric,Core 3,
+Runtime (RDTSC) [s],0.0022,
+Runtime unhalted [s],0.0023,
+Clock [MHz],3491.7627,
+CPI,0.8115,
+Temperature [C],207,
+Energy [J],0.0105,
+Power [W],4.7248,
+Energy PP0 [J],0.0120,
+Power PP0 [W],5.3840,
+Energy PP1 [J],0,
+Power PP1 [W],0,
+Energy DRAM [J],0.0010,
+Power DRAM [W],0.4670,

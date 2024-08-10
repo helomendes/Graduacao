@@ -1,17 +1,17 @@
 # PROGRAMA
         PROG = matmult
-        OBJS = $(PROG).o matriz.o utils.o
+        OBJS = $(PROG).o matriz.o matriz_otimizada.o utils.o
 
 # Compilador
            CC = gcc -Wall 
 
-       CFLAGS = -O3 -mavx2 -march=native -DLIKWID_PERFMON -I$(LIKWID_INCLUDE) 
+       CFLAGS = -O3 -mavx2 -march=native -Ofast -funroll-loops -ffast-math -fassociative-math -DLIKWID_PERFMON -I$(LIKWID_INCLUDE) 
        LFLAGS = -lm
        LDFLAGS = -L$(LIKWID_LIB) -llikwid
 
 # Lista de arquivos para distribuição
 DISTFILES = *.c *.h README.md Makefile perfctr
-DISTDIR = ${basename ${PWD}}
+DISTDIR = `basename ${PWD}`
 
 .PHONY: all debug clean purge dist
 
@@ -28,7 +28,7 @@ $(PROG): $(OBJS)
 
 clean:
 	@echo "Limpando ...."
-	@rm -f *~ *.bak *.tmp core 
+	@rm -f *.bak *.tmp core 
 
 purge:   clean
 	@echo "Faxina ...."
