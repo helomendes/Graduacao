@@ -1,5 +1,5 @@
 PROG = producao
-OBJS = main.o func.o teste.o
+OBJS = main.o func.o 
 
 CC = gcc -Wall
 
