@@ -1,27 +1,35 @@
 #include <stdio.h>
-
-#define MAX BUFSIZ
+#include <stdlib.h>
+#include "func.h"
 
 int main() {
-	char buf[MAX];
-	fgets(buf, MAX, stdin);
-	
-	return 1;
-
+	char *buf;
+	size_t bufsize = 32;
+	size_t chars;
 	int n, m;
-	//le n e m
-	//tem jeitos melhores de alocar vetores e matrizes
-	float v[n];
-	float q[m][2];
-	float c[n][m];
-	
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			// le c[i][j]
-		}
+	n = m = 0;
+	float *v, *pq, *c;
+
+	buf = (char *)malloc(bufsize * sizeof(char));
+	if (buf ==  NULL) {
+		perror("Unable to allocate buffer");
+		exit(1);
 	}
 
-	//encerrada a leitura de dados
+	readNM(buf, bufsize, chars, &n, &m);
+
+	v = allocFloat(n);
+	pq = allocFloat(2*m);
+	c = allocFloat(n*m);
+
+	readV(buf, bufsize, chars, v);
+	readPQ(buf, bufsize, chars, pq, m);
+	readC(buf, bufsize, chars, c, n);
+
+	printVars(n, m, v, pq, c);
+
+	free(buf);
+	freeAll(v, pq, c);
 
 	return 0;
 }
