@@ -28,6 +28,8 @@ int main() {
 
 	printVars(n, m, v, pq, c);
 
+	// agora a parte de formatação da saída
+
 	free(buf);
 	freeAll(v, pq, c);
 
