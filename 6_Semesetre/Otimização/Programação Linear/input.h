@@ -1,5 +1,5 @@
-#ifndef __FUNC__
-#define __FUNC__
+#ifndef __INPUT__
+#define __INPUT__
 
 void printVars();
 void processString();

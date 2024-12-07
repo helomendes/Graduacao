@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "func.h"
+#include "input.h"
 
 int main() {
 	char *buf;
 	size_t bufsize = 32;
-	size_t chars;
+	size_t chars = 0;
 	int n, m;
 	n = m = 0;
 	float *v, *pq, *c;
