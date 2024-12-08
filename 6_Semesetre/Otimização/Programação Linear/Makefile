@@ -1,5 +1,5 @@
 PROG = producao
-OBJS = main.o input.o 
+OBJS = main.o input.o linprog.o 
 
 CC = gcc -Wall
 
@@ -19,6 +19,7 @@ $(PROG): $(OBJS)
 clean:
 	@echo "Limpando..."
 	@rm -f *~ *.bak *.tmp core
+	@rm -f output.txt
 
 purge: clean
 	@echo "Faxina..."

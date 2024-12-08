@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "input.h"
+#include "linprog.h"
 
 int main() {
 	char *buf;
@@ -9,6 +10,7 @@ int main() {
 	int n, m;
 	n = m = 0;
 	float *v, *pq, *c;
+	FILE* arq;
 
 	buf = (char *)malloc(bufsize * sizeof(char));
 	if (buf ==  NULL) {
@@ -27,9 +29,43 @@ int main() {
 	readC(buf, bufsize, chars, c, n);
 
 	printVars(n, m, v, pq, c);
+	printf("\n");
 
-	// agora a parte de formatação da saída
 
+	arq = fopen("output.txt", "w");
+	if (!arq) {
+		perror("Unable to create output file");
+		exit(2);
+	}
+
+	for (int i = 0; i < n; i++) {
+		char *str;
+		str = gain(n, m, v, pq, c, i);
+		fprintf(arq, "%s", str);
+		if (i < n-1)
+			fprintf(arq, " + ");
+		free(str);
+	}
+	fprintf(arq, ";\n\n");
+
+	// restrictions
+	for (int j = 0; j < m; j++) {
+		for (int i = 0; i < n; i++) {
+			char *str;
+			str = restrictions(n, m, v, pq, c, i, j);
+			fprintf(arq, "%s", str);
+			if (i < n-1)
+				fprintf(arq, " + ");
+			free(str);
+		}
+		fprintf(arq, " <= %.2f;\n", pq[2*j + 1]);
+	}
+
+	for (int i = 0; i < n; i++)
+		fprintf(arq, "x%d >= 0;\n", i+1);
+
+
+	fclose(arq);
 	free(buf);
 	freeAll(v, pq, c);
 

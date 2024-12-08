@@ -3,6 +3,7 @@
 make purge
 make
 clear
-cat entrada.txt
+cat input.txt
 echo
-./producao < entrada.txt
+./producao < input.txt
+cat output.txt
