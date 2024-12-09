@@ -3,7 +3,8 @@
 make purge
 make
 clear
-cat input.txt
+cat example.txt
+./producao < example.txt
+cat output.lp
+lp_solve < output.lp
 echo
-./producao < input.txt
-cat output.txt

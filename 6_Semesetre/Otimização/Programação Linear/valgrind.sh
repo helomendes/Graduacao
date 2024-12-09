@@ -3,7 +3,7 @@
 make purge
 make
 clear
-cat input.txt
+cat example.txt
 echo
-valgrind --track-origins=yes -s --leak-check=full ./producao < input.txt
+valgrind --track-origins=yes -s --leak-check=full ./producao < example.txt
 cat output.txt

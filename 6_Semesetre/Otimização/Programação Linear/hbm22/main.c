@@ -29,8 +29,6 @@ int main() {
 	readC(buf, bufsize, chars, c, n);
 
 	//printVars(n, m, v, pq, c);
-	printf("\n");
-
 
 	arq = fopen("output.lp", "w");
 	if (!arq) {
