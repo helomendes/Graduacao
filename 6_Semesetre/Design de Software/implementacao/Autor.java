@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Autor extends Pessoa {
-	ArrayList<Obra> obras;
+	ArrayList<Obra> obras = new ArrayList<Obra>();
 
 	public Autor(String nome) {
 		super(nome);

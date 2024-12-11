@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Usuario extends Pessoa {
-	ArrayList<Emprestimo> emprestimos;
+	ArrayList<Emprestimo> emprestimos = new ArrayList<Emprestimo>();
 	boolean atraso;
 
 	public Usuario(String nome, String cpf, String telefone, String endereco) {

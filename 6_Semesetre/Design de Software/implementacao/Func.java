@@ -1,4 +1,4 @@
-public class func {
+public class Func {
 	public void initBib(Biblioteca bib) {
 		Autor a1 = new Autor("José de Alencar");
 		Autor a2 = new Autor("Machado de Assis");

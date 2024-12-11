@@ -2,10 +2,10 @@ import java.util.ArrayList;
 
 public class Biblioteca {
 	//Atributos
-	ArrayList<Usuario> usuarios;
-	ArrayList<Obra> obras;
-	ArrayList<Editora> editoras;
-	ArrayList<Autor> autores;
+	ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
+	ArrayList<Obra> obras = new ArrayList<Obra>();
+	ArrayList<Editora> editoras = new ArrayList<Editora>();
+	ArrayList<Autor> autores = new ArrayList<Autor>();
 
 	//Construtores
 	
