@@ -10,8 +10,12 @@ pthread_mutex_t mutexsum;
 void *countSum(void *tid) {
 	long id = (long)tid;
 
-	while(count < COUNT_MAX) {
+	while(1) {
 		pthread_mutex_lock(&mutexsum);
+			if (count >= COUNT_MAX) {
+				pthread_mutex_unlock(&mutexsum);
+				break;
+			}
 			count++;
 			printf("Thread %ld: contador em %d\n", id, count);
 		pthread_mutex_unlock(&mutexsum);
