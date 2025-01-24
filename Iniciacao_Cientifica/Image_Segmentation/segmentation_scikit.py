@@ -25,6 +25,7 @@ class Figure:
 
         if not self.headless:
             plt.show()
+        plt.close()
         
 class Segmentation:
     def __init__(self, img):
@@ -102,14 +103,22 @@ class Segmentation:
         segmentation = ndi.binary_fill_holes(segmentation - 1)
         labeled, _ = ndi.label(segmentation)
         image_label_overlay = label2rgb(labeled, image=self.img, bg_label=0)
-
-
+        
+        fig, axs = plt.subplots(1, 2, figsize = (10, 5))
+        axs[0].imshow(self.img, cmap = plt.cm.gray)
+        axs[0].contour(segmentation, [0.5], linewidths = 1.2, colors= 'y')
+        axs[0].set_axis_off()
+        axs[1].imshow(image_label_overlay)
+        axs[1].set_axis_off()
+        fig.tight_layout()
+        figure.saveFig(fig, 'labeled')
 
 def main():
     parse = argparse.ArgumentParser()
     parse.add_argument('--config')
     parse.add_argument('-c', required=False, action='store_true')
     parse.add_argument('-headless', required=False, action='store_true')
+    parse.add_argument('-all', required=False, action='store_true')
     args = parse.parse_args()
 
     with open(args.config, 'r') as file:
@@ -117,26 +126,41 @@ def main():
 
     dest = os.path.abspath(config.get('dest_dir')) + '/'
     os.makedirs(dest, exist_ok=True)
-
-    if args.c:
-        name = 'coins'
-        img = ski.data.coins()
-    else:
-        img_path = config.get('img')
-        name = img_path.split('/')[-1][:-4]
-        img = ski.io.imread(img_path, as_gray = True)
-        img = ski.util.img_as_ubyte(img)
-
+    
     headless=False
     if args.headless:
         headless=True
 
-    figure = Figure(dest, name, headless)
-    seg = Segmentation(img)
+    segs = []
+    names = []
+    if args.c:
+        name = 'coins'
+        names.add(name)
+        img = ski.data.coins()
+        seg = Segmentation(img)
+        segs.add(seg)
+    else:
+        img_path = config.get('img')
+        if not args.all:
+            name = img_path.split('/')[-1][:-4]
+            names.add(name)
+            img = ski.io.imread(img_path, as_gray = True)
+            img = ski.util.img_as_ubyte(img)
+            seg = Segmentation(img)
+            segs.add(seg)
+        else:
+            source = img_path.rsplit('/', 1)[0]
+            names = [name for name in os.listdir(source)]
+            imgs = [ski.io.imread(f'{source}/{img}', as_gray=True) for img in names] 
+            imgs = [ski.util.img_as_ubyte(img) for img in imgs]
+            segs = [Segmentation(img) for img in imgs]
 
-    seg.thresholding(figure)
-    seg.edgeBased(figure)
-    seg.regionBased(figure)
+    for i, seg in enumerate(segs):
+        figure = Figure(dest, names[i], headless)
+        seg.thresholding(figure)
+        seg.edgeBased(figure)
+        seg.regionBased(figure)
+        seg.labeling(figure)
 
 if __name__ == "__main__":
     main()
