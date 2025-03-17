@@ -5,32 +5,6 @@ import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
-def compute_cumulative_hist(norm_hist):
-    return np.cumsum(norm_hist)
-
-def compute_entropy(norm_hist):
-    entropy = np.where(norm_hist > 0, - norm_hist * np.log(norm_hist), 0)
-    return np.cumsum(entropy)
-
-def compute_threshold(norm_hist):
-    cumu_hist = compute_cumulative_hist(norm_hist)
-    entropy_vals = compute_entropy(norm_hist)
-    entropy_255 = entropy_vals[-1]
-
-    f_values = np.zeros(256)
-
-    for t in range(255):
-        if cumu_hist[t] > 0 and cumu_hist[t] < 1:
-            max_cumu_t = np.max(cumu_hist[:t+1])
-            max_cumu_t_next = np.max(cumu_hist[t+1:])
-
-            f1 = (entropy_vals[t] / entropy_255) * (np.log(cumu_hist[t]) / np.log(max_cumu_t))
-            f2 = ( 1 - (entropy_vals[t] / entropy_255)) * (np.log(1 - cumu_hist[t]) / np.log(max_cumu_t_next))
-
-        f_values[t] = f1+f2
-
-    return np.argmax(f_values)
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', help="Configuration YAML file")
@@ -44,49 +18,52 @@ def main():
     os.makedirs(dest_dir, exist_ok=True)
 
     imgs = sorted([f'{imgs_dir}{img}' for img in os.listdir(imgs_dir)])
+    img_path = imgs[-2]
+    name = dest_dir + img_path.split('/')[-1].split('.')[0]
+    img = cv.imread(img_path, cv.IMREAD_GRAYSCALE)
 
-    img = cv.imread(imgs[-2], cv.IMREAD_GRAYSCALE)
-    hist = cv.calcHist(img, [0], None, [256], [0, 256]).flatten()
-    norm_hist = hist / hist.sum()
+    dic = {}
+    for i in range(6):
+        dic[i] = {}
+        dic[i]['Name'] = None
+        dic[i]['Type'] = None
+    dic[0]['Name'] = 'Original'
+    dic[1]['Name'] = 'Binary'
+    dic[1]['Type'] = 0
+    dic[2]['Name'] = 'Binary_Inverted'
+    dic[2]['Type'] = 1
+    dic[3]['Name'] = 'Threshold_Truncated'
+    dic[3]['Type'] = 2
+    dic[4]['Name'] = 'Threshold_to_Zero'
+    dic[4]['Type'] = 3
+    dic[5]['Name'] = 'Threshold_to_Zero_Inverted'
+    dic[5]['Type'] = 4
 
+    for i in range(6):
+        if dic[i]['Type'] != None:
+            _, dst = cv.threshold(img, 100, 255, dic[i]['Type'])
+            save_name = name + dic[i]['Name'] + '.jpg'
+        else:
+            dst = img
+            save_name = name + '.jpg'
+        hist = cv.calcHist(dst, [0], None, [256], [0, 256]).flatten()
+
+        plt.figure(figsize=(15,10))
+        
+        plt.subplot(1, 2, 1)
+        plt.imshow(dst, cmap='gray')
+        plt.title(dic[i]['Name'])
+        plt.axis('off')
+
+        plt.subplot(1, 2, 2)
+        plt.plot(hist, color='black', label='Histogram')
+        plt.title('Histogram')
+        plt.xlabel('Gray Level')
+        plt.ylabel('Pixel Count')
+        plt.legend()
     
-
-    #threshold = compute_threshold(norm_hist)
-    #_, binary_image = cv.threshold(img, threshold, 255, cv.THRESH_BINARY)
-
-    #print('Threshold: ', threshold)
-
-    plt.figure(figsize=(15,10))
-    
-    plt.subplot(2, 2, 1)
-    plt.imshow(img, cmap='gray')
-    plt.title('Original Image')
-    plt.axis('off')
-
-    '''
-    plt.subplot(2, 2, 2)
-    plt.imshow(binary_image, cmap='gray')
-    plt.title('Binary Image')
-    plt.axis('off')
-    '''
-
-    plt.subplot(2,2,3)
-    plt.plot(hist, color='black', label='Histogram')
-    plt.title('Original Histogram')
-    plt.xlabel('Gray Level')
-    plt.ylabel('Pixel Count')
-    plt.legend()
-
-    plt.subplot(2,2,4)
-    plt.plot(norm_hist, color='red', label='Normalization')
-    plt.title('Normalized Histogram')
-    plt.xlabel('Gray Level')
-    plt.ylabel('Pixel Count')
-    plt.legend()
-
-    #plt.savefig(f'{dest_dir}binaryimage.png')
-    plt.tight_layout()
-    plt.show()
+        plt.tight_layout()
+        plt.savefig(save_name)
 
 if __name__=="__main__":
     main()
