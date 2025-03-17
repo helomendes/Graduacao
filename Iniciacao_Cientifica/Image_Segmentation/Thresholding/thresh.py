@@ -22,11 +22,16 @@ def main():
     name = dest_dir + img_path.split('/')[-1].split('.')[0]
     img = cv.imread(img_path, cv.IMREAD_GRAYSCALE)
 
+    thresh = 125
+
     dic = {}
     for i in range(6):
         dic[i] = {}
         dic[i]['Name'] = None
         dic[i]['Type'] = None
+        dic[i]['Image'] = None
+        dic[i]['Hist'] = None
+        dic[i]['Save_name'] = None
     dic[0]['Name'] = 'Original'
     dic[1]['Name'] = 'Binary'
     dic[1]['Type'] = 0
@@ -41,29 +46,37 @@ def main():
 
     for i in range(6):
         if dic[i]['Type'] != None:
-            _, dst = cv.threshold(img, 100, 255, dic[i]['Type'])
-            save_name = name + dic[i]['Name'] + '.jpg'
+            _, dic[i]['Image'] = cv.threshold(img, thresh, 255, dic[i]['Type'])
+            dic[i]['Save_name'] = name + dic[i]['Name'] + '.png'
         else:
-            dst = img
-            save_name = name + '.jpg'
-        hist = cv.calcHist(dst, [0], None, [256], [0, 256]).flatten()
+            dic[i]['Image'] = img
+            dic[i]['Save_name'] = name + '.png'
+        dic[i]['Hist'] = cv.calcHist(dic[i]['Image'], [0], None, [256], [0, 256]).flatten()
 
+    hists = []
+    for i in range(6):
+        hists.append(dic[i]['Hist'].max())
+    max_y = max(hists)
+
+    for i in range(6):
         plt.figure(figsize=(15,10))
         
         plt.subplot(1, 2, 1)
-        plt.imshow(dst, cmap='gray')
+        plt.imshow(dic[i]['Image'], cmap='gray')
         plt.title(dic[i]['Name'])
         plt.axis('off')
 
         plt.subplot(1, 2, 2)
-        plt.plot(hist, color='black', label='Histogram')
+        plt.plot(dic[i]['Hist'], color='red', label='Histogram')
+        plt.xlim(0, 256)
+        plt.ylim(0, max_y)
         plt.title('Histogram')
         plt.xlabel('Gray Level')
         plt.ylabel('Pixel Count')
         plt.legend()
     
         plt.tight_layout()
-        plt.savefig(save_name)
+        plt.savefig(dic[i]['Save_name'])
 
 if __name__=="__main__":
     main()
