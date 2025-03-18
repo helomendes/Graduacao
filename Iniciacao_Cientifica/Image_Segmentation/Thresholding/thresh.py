@@ -68,8 +68,8 @@ def main():
 
         plt.subplot(1, 2, 2)
         plt.plot(dic[i]['Hist'], color='red', label='Histogram')
-        plt.xlim(0, 256)
-        plt.ylim(0, max_y)
+        plt.xlim(-5, 260)
+        plt.ylim(-5, max_y+4)
         plt.title('Histogram')
         plt.xlabel('Gray Level')
         plt.ylabel('Pixel Count')
