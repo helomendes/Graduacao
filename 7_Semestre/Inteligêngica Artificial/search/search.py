@@ -93,25 +93,23 @@ def depthFirstSearch(problem: SearchProblem) -> List[Directions]:
 
     steps = util.Stack()
     path = []
-    def dfs(problem, steps):
-        if problem.isGoalState(problem.getStartState()):
+    def dfs(problem, current, steps):
+        if problem.isGoalState(current):
             return steps.list 
-        current = problem.getStartState()
         path.append(current)
         successors = problem.getSuccessors(current)
-        new_problem = SearchProblem()
-        new_problem = problem
         test = None
         for suc in successors:
             if suc[0] not in path:
-                new_problem.startState = suc[0]
                 steps.push(suc[1])
-                test = dfs(new_problem, steps)
+                test = dfs(problem, suc[0], steps)
+                if test:
+                    break
         if not test and len(steps.list) > 0:
             steps.pop()
             return
         return steps.list
-    return dfs(problem, steps)
+    return dfs(problem, problem.getStartState(), steps)
             
     util.raiseNotDefined()
 
