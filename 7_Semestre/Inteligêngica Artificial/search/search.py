@@ -117,6 +117,24 @@ def depthFirstSearch(problem: SearchProblem) -> List[Directions]:
 def breadthFirstSearch(problem: SearchProblem) -> List[Directions]:
     """Search the shallowest nodes in the search tree first."""
     "*** YOUR CODE HERE ***"
+    steps = util.Stack()
+    neighbors = util.Queue()
+    path = []
+    def bfs(problem, current, steps):
+        if problem.isGoalState(current):
+            return steps.list
+        if current in path:
+            return
+        path.append(current)
+        while len(neighbors.list) > 0: 
+            bfs(problem, neighbors.pop()[0], steps)
+        successors = problem.getSuccessors(current)
+        neighbors.list = successors
+        for successor in successors:
+            bfs(problem, successor[0], steps)
+
+
+    return bfs(problem, problem.getStartState(), steps)
     util.raiseNotDefined()
 
 def uniformCostSearch(problem: SearchProblem) -> List[Directions]:
