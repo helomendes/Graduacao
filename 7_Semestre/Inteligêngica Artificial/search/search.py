@@ -91,20 +91,28 @@ def depthFirstSearch(problem: SearchProblem) -> List[Directions]:
     """
     "*** YOUR CODE HERE ***"
 
-    if problem.isGoalState(problem.getStartState()):
-        print('goal state')
-        print(problem.visualize)
-        return []
-    current = problem.getStartState()
-    successors = problem.getSuccessors(current)
-    new_problem = SearchProblem()
-    new_problem = problem
-    for suc in successors:
-        if suc[0] not in problem._visitedlist:
-            new_problem.startState = suc[0]
-            depthFirstSearch(new_problem)
-    return
-
+    steps = util.Stack()
+    path = []
+    def dfs(problem, steps):
+        if problem.isGoalState(problem.getStartState()):
+            return steps.list 
+        current = problem.getStartState()
+        path.append(current)
+        successors = problem.getSuccessors(current)
+        new_problem = SearchProblem()
+        new_problem = problem
+        test = None
+        for suc in successors:
+            if suc[0] not in path:
+                new_problem.startState = suc[0]
+                steps.push(suc[1])
+                test = dfs(new_problem, steps)
+        if not test and len(steps.list) > 0:
+            steps.pop()
+            return
+        return steps.list
+    return dfs(problem, steps)
+            
     util.raiseNotDefined()
 
 
