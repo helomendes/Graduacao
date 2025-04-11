@@ -147,27 +147,28 @@ def breadthFirstSearch(problem: SearchProblem) -> List[Directions]:
     return bfs(problem, problem.getStartState(), steps)
     util.raiseNotDefined()
     '''
-    frontier = util.Queue()
-    visited = set()
+    neighbors = util.Queue()
+    path = set()
 
     start_state = problem.getStartState()
-    frontier.push((start_state, []))
+    neighbors.push((start_state, []))
 
-    while not frontier.isEmpty():
-        state, path = frontier.pop()
-        if state in visited:
+    while not neighbors.isEmpty():
+        state, path = neighbors.pop()
+        if state in path:
             continue
-        visited.add(state)
+        path.add(state)
         if problem.isGoalState(state):
             return path
         for successor, action, _ in problem.getSuccessors(state):
-            if successor not in visited:
-                frontier.push((successor, path + [action]))
+            if successor not in path:
+                neighbors.push((successor, path + [action]))
     return []  
 
 def uniformCostSearch(problem: SearchProblem) -> List[Directions]:
     """Search the node of least total cost first."""
     "*** YOUR CODE HERE ***"
+    neighbors = util.Queue()
     util.raiseNotDefined()
 
 def nullHeuristic(state, problem=None) -> float:
