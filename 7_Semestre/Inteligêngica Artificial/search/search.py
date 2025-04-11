@@ -117,25 +117,53 @@ def depthFirstSearch(problem: SearchProblem) -> List[Directions]:
 def breadthFirstSearch(problem: SearchProblem) -> List[Directions]:
     """Search the shallowest nodes in the search tree first."""
     "*** YOUR CODE HERE ***"
-    steps = util.Stack()
-    neighbors = util.Queue()
-    path = []
+    '''
     def bfs(problem, current, steps):
         if problem.isGoalState(current):
             return steps.list
         if current in path:
             return
+        print('\nCurrent: ', current)
         path.append(current)
-        while len(neighbors.list) > 0: 
-            bfs(problem, neighbors.pop()[0], steps)
-        successors = problem.getSuccessors(current)
-        neighbors.list = successors
-        for successor in successors:
-            bfs(problem, successor[0], steps)
+        while not neighbors.isEmpty():
+            nex = neighbors.pop()
+            temp.push(nex)
+            print('Next: ', nex)
+            bfs(problem, nex[0], steps)
+        print('Temp: ', temp.list)
+        
+        while not temp.isEmpty():
+            successors = problem.getSuccessors(temp.pop()[0])
+            for successor in successors:
+                neighbors.push(successor)
 
+        bfs(problem, neighbors.pop()[0], steps)
 
+    steps = util.Stack()
+    neighbors = util.Queue()
+    neighbors.push([problem.getStartState(), ''])
+    temp = util.Queue()
+    path = []
     return bfs(problem, problem.getStartState(), steps)
     util.raiseNotDefined()
+    '''
+    frontier = util.Queue()
+    visited = set()
+
+    start_state = problem.getStartState()
+    frontier.push((start_state, []))
+
+    while not frontier.isEmpty():
+        state, path = frontier.pop()
+        if state in visited:
+            continue
+        visited.add(state)
+        if problem.isGoalState(state):
+            return path
+        for successor, action, _ in problem.getSuccessors(state):
+            if successor not in visited:
+                frontier.push((successor, path + [action]))
+    return []  
 
 def uniformCostSearch(problem: SearchProblem) -> List[Directions]:
     """Search the node of least total cost first."""
