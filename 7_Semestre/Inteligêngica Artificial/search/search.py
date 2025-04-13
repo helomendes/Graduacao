@@ -111,65 +111,48 @@ def depthFirstSearch(problem: SearchProblem) -> List[Directions]:
         return steps.list
     return dfs(problem, problem.getStartState(), steps)
             
-    util.raiseNotDefined()
-
-
 def breadthFirstSearch(problem: SearchProblem) -> List[Directions]:
     """Search the shallowest nodes in the search tree first."""
     "*** YOUR CODE HERE ***"
-    '''
-    def bfs(problem, current, steps):
-        if problem.isGoalState(current):
-            return steps.list
-        if current in path:
-            return
-        print('\nCurrent: ', current)
-        path.append(current)
-        while not neighbors.isEmpty():
-            nex = neighbors.pop()
-            temp.push(nex)
-            print('Next: ', nex)
-            bfs(problem, nex[0], steps)
-        print('Temp: ', temp.list)
-        
-        while not temp.isEmpty():
-            successors = problem.getSuccessors(temp.pop()[0])
-            for successor in successors:
-                neighbors.push(successor)
-
-        bfs(problem, neighbors.pop()[0], steps)
-
-    steps = util.Stack()
     neighbors = util.Queue()
-    neighbors.push([problem.getStartState(), ''])
-    temp = util.Queue()
-    path = []
-    return bfs(problem, problem.getStartState(), steps)
-    util.raiseNotDefined()
-    '''
-    neighbors = util.Queue()
-    path = set()
-
+    visited = set()
+    
     start_state = problem.getStartState()
     neighbors.push((start_state, []))
 
     while not neighbors.isEmpty():
         state, path = neighbors.pop()
-        if state in path:
+        if state in visited:
             continue
-        path.add(state)
+        visited.add(state)
         if problem.isGoalState(state):
             return path
         for successor, action, _ in problem.getSuccessors(state):
-            if successor not in path:
+            if successor not in visited:
                 neighbors.push((successor, path + [action]))
     return []  
 
-def uniformCostSearch(problem: SearchProblem) -> List[Directions]:
+def uniformCostSearch(problem) -> List:
     """Search the node of least total cost first."""
     "*** YOUR CODE HERE ***"
-    neighbors = util.Queue()
-    util.raiseNotDefined()
+    neighbors = util.PriorityQueue()
+    visited = {}
+
+    start_state = problem.getStartState()
+    neighbors.push((start_state, [], 0), 0)
+
+    while not neighbors.isEmpty():
+        state, path, cost = neighbors.pop()
+        if state in visited and visited[state] <= cost:
+            continue
+        visited[state] = cost
+        if problem.isGoalState(state):
+            return path
+        for successor, action, step_cost in problem.getSuccessors(state):
+            new_cost = cost + step_cost
+            new_path = path + [action]
+            neighbors.push((successor, new_path, new_cost), new_cost)
+    return []
 
 def nullHeuristic(state, problem=None) -> float:
     """
@@ -178,10 +161,28 @@ def nullHeuristic(state, problem=None) -> float:
     """
     return 0
 
-def aStarSearch(problem: SearchProblem, heuristic=nullHeuristic) -> List[Directions]:
+def aStarSearch(problem, heuristic=lambda state, problem=None: 0) -> List:
     """Search the node that has the lowest combined cost and heuristic first."""
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    neighbors = util.PriorityQueue()
+    visited = {}
+
+    start_state = problem.getStartState()
+    neighbors.push((start_state, [], 0), heuristic(start_state, problem))
+
+    while not neighbors.isEmpty():
+        state, path, cost = neighbors.pop()
+        if state in visited and visited[state] <= cost:
+            continue
+        visited[state] = cost
+        if problem.isGoalState(state):
+            return path
+        for successor, action, step_cost in problem.getSuccessors(state):
+            new_cost = cost + step_cost
+            new_path = path + [action]
+            util.Priority = new_cost + heuristic(successor, problem)
+            neighbors.push((successor, new_path, new_cost), util.Priority)
+    return [] 
 
 # Abbreviations
 bfs = breadthFirstSearch
