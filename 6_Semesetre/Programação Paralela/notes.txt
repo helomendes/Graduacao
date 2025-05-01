@@ -1,0 +1,1 @@
+se não definir o n° de threads usa o número de núcleos lógicos
