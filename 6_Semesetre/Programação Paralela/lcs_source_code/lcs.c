@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <omp.h>
+
+#define DEBUGMATRIX
 
 #ifndef max
 #define max( a, b ) ( ((a) > (b)) ? (a) : (b) )
@@ -78,22 +81,47 @@ void initScoreMatrix(mtype ** scoreMatrix, int sizeA, int sizeB) {
 
 int LCS(mtype ** scoreMatrix, int sizeA, int sizeB, char * seqA, char *seqB) {
 	int i, j;
+
 	for (i = 1; i < sizeB + 1; i++) {
 		for (j = 1; j < sizeA + 1; j++) {
 			if (seqA[j - 1] == seqB[i - 1]) {
 				/* if elements in both sequences match,
 				 the corresponding score will be the score from
 				 previous elements + 1*/
-				scoreMatrix[i][j] = scoreMatrix[i - 1][j - 1] + 1;
+					scoreMatrix[i][j] = scoreMatrix[i - 1][j - 1] + 1;
 			} else {
 				/* else, pick the maximum value (score) from left and upper elements*/
-				scoreMatrix[i][j] =
+					scoreMatrix[i][j] =
 						max(scoreMatrix[i-1][j], scoreMatrix[i][j-1]);
 			}
 		}
 	}
 	return scoreMatrix[sizeB][sizeA];
 }
+
+int LCS_parallel(mtype ** scoreMatrix, int sizeA, int sizeB, char * seqA, char *seqB, int num_threads) {
+	int i, j;
+	omp_set_num_threads(num_threads);
+
+	#pragma omp parallel
+	{
+		for (int d = 2; d <= sizeA + sizeB; d++) {
+			#pragma omp for
+			for (i = 1; i < sizeB + 1; i++) {
+				int j = d - i;
+				if (j >= 1 && j <= sizeA) {
+					if (seqA[j - 1] == seqB[i - 1]) {
+							scoreMatrix[i][j] = scoreMatrix[i - 1][j - 1] + 1;
+					} else {
+							scoreMatrix[i][j] =	max(scoreMatrix[i-1][j], scoreMatrix[i][j-1]);
+					}
+				}
+			}
+		}
+	}
+	return scoreMatrix[sizeB][sizeA];
+}
+
 void printMatrix(char * seqA, char * seqB, mtype ** scoreMatrix, int sizeA,
 		int sizeB) {
 	int i, j;
@@ -131,15 +159,23 @@ void freeScoreMatrix(mtype **scoreMatrix, int sizeB) {
 }
 
 int main(int argc, char ** argv) {
+	int num_threads = 1;
+
 	// sequence pointers for both sequences
 	char *seqA, *seqB;
 
 	// sizes of both sequences
 	int sizeA, sizeB;
 
+	if (argc > 1) {
+		char *num_thrds = argv[1];
+		num_threads = atoi(num_thrds);
+	}
+
 	//read both sequences
 	seqA = read_seq("fileA.in");
 	seqB = read_seq("fileB.in");
+
 
 	//find out sizes
 	sizeA = strlen(seqA);
@@ -152,7 +188,7 @@ int main(int argc, char ** argv) {
 	initScoreMatrix(scoreMatrix, sizeA, sizeB);
 
 	//fill up the rest of the matrix and return final score (element locate at the last line and collumn)
-	mtype score = LCS(scoreMatrix, sizeA, sizeB, seqA, seqB);
+	mtype score = LCS_parallel(scoreMatrix, sizeA, sizeB, seqA, seqB, num_threads);
 
 	/* if you wish to see the entire score matrix,
 	 for debug purposes, define DEBUGMATRIX. */

@@ -1,0 +1,65 @@
+versao SO
+kernel
+compilador
+flags de compilação
+modelo de processador
+numero de execuções
+
+porcentagem de tempo que o algoritmo demora em trechos que você não paralelizou
+
+aplicar Lei de Amdahl
+tabela com  speedup máximo teórico para 2, 4,8 e infinitos processadores
+metolodogia para obter o tempo paralelizável e puramente sequencial
+
+tabelas de speedup e eficiência
+varie o número de threads entre 1, 2, 4 e 8
+varie o tamanho das entradas
+ajuste a quantidade de threads de acordou com o processador que você estiver utilizando
+pense no número de threads que faça sentido
+
+analise os resultados e discuta cada uma das duas tabelas (speedup e eficiência)
+comparar os resultados com speedup linear ou a estimativa da lei de Amdahl
+
+escalabilidade forte, fraca ou não foi escalável
+argumentos coerentes e sólidos
+
+resultados coerentes?
+esperados?
+
+### Experimentos
+
+verificar se os resultados paralelos batem com os sequênciais excutando diferentes entradas
+o resultado bater não significa obrigatóriamente que o código está correto
+
+execute pelo menos 20x cada versão para obter uma média minimamente significativa
+média com desvio padrão
+métricas deverão ser calculadas encima da média das execuções
+
+escolher um modelo de máquina e sempre utilizar o mesmo modelo
+não usar servidores virtuais ou que contenham outros usuários
+não haja outros processos ou usuários
+execute com as flags máximas de otimização do compilador -O3 para o gcc
+se queremos modificar as configurações de DVFS (turbo-boost) - fixar a frequência de operação da nossa máquina
+
+reduzir a variabilidade ao fixar as threads nos núcleos de processamento
+
+teste de escalabilidade forte
+manter o tamanho da entrada N e aumentar gradativamente o número de processos
+ N tal que o tempo de execução seja >= 10s
+
+teste de escalabilidade fraca
+aumentar o tamanho da entrada e o numero de threads
+escalar N com o número de threads
+o impacto de N no tempo final dependerá da complexidade do algoritmo que estamos trabalhando nesse semestre
+
+algoritmo genérico para executar com 1, 2, 3, N threads
+
+sequencial e paralelo devem gerar as mesmas saídas
+
+formas de apresentação de fácil entendimento
+
+### Longest Common Subsequence Problem
+
+Problema da maior subsequência comum
+
+
