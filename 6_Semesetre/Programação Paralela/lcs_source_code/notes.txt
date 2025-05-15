@@ -46,6 +46,7 @@ reduzir a variabilidade ao fixar as threads nos núcleos de processamento
 teste de escalabilidade forte
 manter o tamanho da entrada N e aumentar gradativamente o número de processos
  N tal que o tempo de execução seja >= 10s
+N = 30000
 
 teste de escalabilidade fraca
 aumentar o tamanho da entrada e o numero de threads
@@ -57,9 +58,4 @@ algoritmo genérico para executar com 1, 2, 3, N threads
 sequencial e paralelo devem gerar as mesmas saídas
 
 formas de apresentação de fácil entendimento
-
-### Longest Common Subsequence Problem
-
-Problema da maior subsequência comum
-
 

@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <omp.h>
+#include <time.h>
 
-#define DEBUGMATRIX
+//#define DEBUGMATRIX
 
 #ifndef max
 #define max( a, b ) ( ((a) > (b)) ? (a) : (b) )
@@ -80,6 +81,10 @@ void initScoreMatrix(mtype ** scoreMatrix, int sizeA, int sizeB) {
 }
 
 int LCS(mtype ** scoreMatrix, int sizeA, int sizeB, char * seqA, char *seqB) {
+	clock_t start, end;
+	double time;
+
+	start = clock();
 	int i, j;
 
 	for (i = 1; i < sizeB + 1; i++) {
@@ -96,10 +101,17 @@ int LCS(mtype ** scoreMatrix, int sizeA, int sizeB, char * seqA, char *seqB) {
 			}
 		}
 	}
+	end = clock();
+	time = ((double)(end - start))/CLOCKS_PER_SEC;
+	printf("%f\n", time);
 	return scoreMatrix[sizeB][sizeA];
 }
 
 int LCS_parallel(mtype ** scoreMatrix, int sizeA, int sizeB, char * seqA, char *seqB, int num_threads) {
+	clock_t start, end;
+	double time;
+
+	start = clock();
 	int i, j;
 	omp_set_num_threads(num_threads);
 
@@ -119,6 +131,9 @@ int LCS_parallel(mtype ** scoreMatrix, int sizeA, int sizeB, char * seqA, char *
 			}
 		}
 	}
+	end = clock();
+	time = ((double)(end - start))/CLOCKS_PER_SEC;
+	printf("%f\n", time);
 	return scoreMatrix[sizeB][sizeA];
 }
 
@@ -159,6 +174,15 @@ void freeScoreMatrix(mtype **scoreMatrix, int sizeB) {
 }
 
 int main(int argc, char ** argv) {
+	/*	Threads
+	 *	N
+	 *	Sequential time
+	 *	Parallel time
+	 *	Total time
+	 *	*/
+	clock_t start_main, end_main;
+	start_main = clock();
+		
 	int num_threads = 1;
 
 	// sequence pointers for both sequences
@@ -181,6 +205,8 @@ int main(int argc, char ** argv) {
 	sizeA = strlen(seqA);
 	sizeB = strlen(seqB);
 
+	printf("\n%d\n%d\n", num_threads, sizeA);
+
 	// allocate LCS score matrix
 	mtype ** scoreMatrix = allocateScoreMatrix(sizeA, sizeB);
 
@@ -188,7 +214,9 @@ int main(int argc, char ** argv) {
 	initScoreMatrix(scoreMatrix, sizeA, sizeB);
 
 	//fill up the rest of the matrix and return final score (element locate at the last line and collumn)
-	mtype score = LCS_parallel(scoreMatrix, sizeA, sizeB, seqA, seqB, num_threads);
+	mtype score = LCS(scoreMatrix, sizeA, sizeB, seqA, seqB);
+
+	score = LCS_parallel(scoreMatrix, sizeA, sizeB, seqA, seqB, num_threads);
 
 	/* if you wish to see the entire score matrix,
 	 for debug purposes, define DEBUGMATRIX. */
@@ -196,11 +224,15 @@ int main(int argc, char ** argv) {
 	printMatrix(seqA, seqB, scoreMatrix, sizeA, sizeB);
 #endif
 
-	//print score
-	printf("\nScore: %d\n", score);
-
 	//free score matrix
 	freeScoreMatrix(scoreMatrix, sizeB);
+
+	end_main = clock();
+	double time_main = ((double)(end_main - start_main))/CLOCKS_PER_SEC;
+	printf("%f\n", time_main);
+
+	//print score
+	//printf("\nScore: %d\n", score);
 
 	return EXIT_SUCCESS;
 }
