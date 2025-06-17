@@ -6,6 +6,8 @@
 #define max( a, b ) ( ((a) > (b)) ? (a) : (b) )
 #endif
 
+#define DEBUGMATRIX
+
 typedef unsigned short mtype;
 
 /* Read sequence from a file to a char vector.
@@ -76,57 +78,17 @@ void initScoreMatrix(mtype ** scoreMatrix, int sizeA, int sizeB) {
 		scoreMatrix[i][0] = 0;
 }
 
-int old_LCS(mtype ** scoreMatrix, int sizeA, int sizeB, char * seqA, char *seqB) {
-	int i, j;
-	for (i = 1; i < sizeB + 1; i++) {
-		for (j = 1; j < sizeA + 1; j++) {
-			printf("[%d][%d]\n", i, j);
-			if (seqA[j - 1] == seqB[i - 1]) {
-				/* if elements in both sequences match,
-				 the corresponding score will be the score from
-				 previous elements + 1*/
-				scoreMatrix[i][j] = scoreMatrix[i - 1][j - 1] + 1;
-			} else {
-				/* else, pick the maximum value (score) from left and upper elements*/
-				scoreMatrix[i][j] =
-						max(scoreMatrix[i-1][j], scoreMatrix[i][j-1]);
-			}
-		}
-	}
-	return scoreMatrix[sizeB][sizeA];
-}
-
 int LCS(mtype ** scoreMatrix, int sizeA, int sizeB, char * seqA, char *seqB) {
-	printf("sizeA: %d\n", sizeA);
-	printf("sizeB: %d\n", sizeB);
-	int i, j, aux_i, aux_j;
-	i = 1;
-	j = 1;
-	while (j < sizeA) {
-		aux_i = i;
-		aux_j = j;
-		while (aux_j >= 1 && aux_i < sizeB) {
-				printf("[%d][%d]\n", aux_i, aux_j);
-				aux_i += 1;
-				aux_j -= 1;
-		}
-		j++;
-	}
-	while (i < sizeB) {
-		//nao acho que é por aqui
-	}
-	for (i = 1; i < sizeB + 1; i++) {
-		for (j = 1; j < sizeA + 1; j++) {
-			//printf("[%d][%d]\n", i, j);
-			if (seqA[j - 1] == seqB[i - 1]) {
-				/* if elements in both sequences match,
-				 the corresponding score will be the score from
-				 previous elements + 1*/
-				scoreMatrix[i][j] = scoreMatrix[i - 1][j - 1] + 1;
-			} else {
-				/* else, pick the maximum value (score) from left and upper elements*/
-				scoreMatrix[i][j] =
-						max(scoreMatrix[i-1][j], scoreMatrix[i][j-1]);
+	int i, j;
+	for (int s = 2; s <= sizeA + sizeB; s++) {
+		for (i = 1; i <= sizeB; i++) {
+			j = s - i;
+			if (1 <= j && j <= sizeA) {
+				if (seqA[j-1] == seqB[i-1]) {
+					scoreMatrix[i][j] = scoreMatrix[i-1][j-1] + 1;
+				} else {
+					scoreMatrix[i][j] = max(scoreMatrix[i-1][j], scoreMatrix[i][j-1]);
+				}
 			}
 		}
 	}
