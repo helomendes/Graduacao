@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <mpi.h>
 
 #ifndef max
 #define max( a, b ) ( ((a) > (b)) ? (a) : (b) )
@@ -153,10 +152,7 @@ int main(int argc, char ** argv) {
 	initScoreMatrix(scoreMatrix, sizeA, sizeB);
 
 	//fill up the rest of the matrix and return final score (element locate at the last line and collumn)
-	
-	MPI_Init(&argc, &argv);
 	mtype score = LCS(scoreMatrix, sizeA, sizeB, seqA, seqB);
-	MPI_Finalize();
 
 	/* if you wish to see the entire score matrix,
 	 for debug purposes, define DEBUGMATRIX. */
