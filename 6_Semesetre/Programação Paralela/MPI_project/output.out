@@ -1,0 +1,18 @@
+
+Compiling sequential file lcs.c
+Compiling parallel file mod_lcs.c
+
+Running on: node9
+SLURM_JOB_ID: 10225
+Working directory: /home/hbm/MPI_project
+Starting job...
+
+##########################################
+
+Executing sequential algorithm
+
+Score: 4
+
+------------------------------------------
+
+Executing parallel algorithm

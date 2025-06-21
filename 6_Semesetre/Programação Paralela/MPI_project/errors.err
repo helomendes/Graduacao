@@ -1,0 +1,7 @@
++ echo Executing sequential algorithm
++ ./seq
++ echo
++ echo ------------------------------------------
++ echo
++ echo Executing parallel algorithm
++ mpirun -np 2 --map-by ppr:1:node ./par 2
