@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4e2c588fabee27db",
+        "id": "67cc6ffa65c844b1",
         "type": "tabs",
         "children": [
           {
-            "id": "a9f4fa2fab3a5cf5",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Evolução Molecular/cola_prova.excalidraw"
-              },
-              "icon": "excalidraw-icon",
-              "title": "cola_prova"
-            }
-          },
-          {
-            "id": "10323e877de1e15f",
+            "id": "d427a0627da4b189",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
@@ -88,7 +76,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e83389665cd2b1dc",
@@ -194,22 +183,23 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "a9f4fa2fab3a5cf5",
+  "active": "d427a0627da4b189",
   "lastOpenFiles": [
-    "Evolução Molecular/anotacoes.excalidraw",
-    "Evolução Molecular/cola_prova.excalidraw",
-    "Construção de Compiladores/anotacoes.excalidraw",
-    "Evolução Molecular/anotacoes1.excalidraw",
-    "Evolução Molecular/anotacoes1 (1).excalidraw",
-    "Untitled 1.base",
-    "Untitled.base",
+    "Construção de Compiladores/llvm_tutorials/e4.ll~",
+    "Construção de Compiladores/llvm_tutorials/e4.rs~",
+    "Construção de Compiladores/llvm_tutorials/e4.ll",
+    "Construção de Compiladores/llvm_tutorials/e4.rs",
+    "Construção de Compiladores/llvm_tutorials/e3.ll~",
+    "Construção de Compiladores/llvm_tutorials/e3.ll",
+    "Construção de Compiladores/llvm_tutorials/e2.ll~",
+    "Construção de Compiladores/llvm_tutorials/e2.ll",
+    "Construção de Compiladores/llvm_tutorials/e1.ll~",
+    "Construção de Compiladores/llvm_tutorials/e1.ll",
+    "Construção de Compiladores/llvm_tutorials/e1.rs",
     "anotacoes.md",
-    "Computação Quântica/anotacoes.excalidraw",
-    "Evolução Molecular",
     "Computação Quântica/anotacoes.excalidraw.md",
     "Computação Quântica/anotacoes.md",
     "Excalidraw/Drawing 2026-03-20 19.48.34.excalidraw.md",
-    "Excalidraw",
     "Computação Quântica/Drawing 2026-03-20 19.43.54.excalidraw.md"
   ]
 }
