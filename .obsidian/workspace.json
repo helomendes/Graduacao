@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "67cc6ffa65c844b1",
+        "id": "ab190c6d879bf6c9",
         "type": "tabs",
         "children": [
           {
-            "id": "d427a0627da4b189",
+            "id": "c69ea9640cb8bdde",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Construção de Compiladores/anotacoes.excalidraw"
-              },
-              "icon": "excalidraw-icon",
-              "title": "anotacoes"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -76,8 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e83389665cd2b1dc",
@@ -183,8 +180,12 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "d427a0627da4b189",
+  "active": "c69ea9640cb8bdde",
   "lastOpenFiles": [
+    "Computação Quântica/anotacoes.excalidraw",
+    "Drawing 2026-04-13 08.08.47.excalidraw.md",
+    "Untitled.md",
+    "Construção de Compiladores/anotacoes.excalidraw",
     "Construção de Compiladores/llvm_tutorials/e4.ll~",
     "Construção de Compiladores/llvm_tutorials/e4.rs~",
     "Construção de Compiladores/llvm_tutorials/e4.ll",
@@ -193,9 +194,6 @@
     "Construção de Compiladores/llvm_tutorials/e3.ll",
     "Construção de Compiladores/llvm_tutorials/e2.ll~",
     "Construção de Compiladores/llvm_tutorials/e2.ll",
-    "Construção de Compiladores/llvm_tutorials/e1.ll~",
-    "Construção de Compiladores/llvm_tutorials/e1.ll",
-    "Construção de Compiladores/llvm_tutorials/e1.rs",
     "anotacoes.md",
     "Computação Quântica/anotacoes.excalidraw.md",
     "Computação Quântica/anotacoes.md",
