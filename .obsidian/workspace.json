@@ -4,20 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "d710beb375ef32ab",
+        "id": "30bc670bf974527b",
         "type": "tabs",
         "children": [
           {
-            "id": "d7726ca4842bdd93",
+            "id": "1555968fe78a79bc",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "excalidraw",
               "state": {
-                "file": "Untitled.base",
-                "viewName": "Table"
+                "file": "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.md"
               },
-              "icon": "lucide-table",
-              "title": "Untitled"
+              "icon": "excalidraw-icon",
+              "title": "3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS"
             }
           }
         ]
@@ -183,28 +182,36 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "402ad13f894e1fac",
+  "active": "1555968fe78a79bc",
   "lastOpenFiles": [
-    "Untitled 1.base",
+    "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md",
+    "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.md",
+    "Drawing 2026-05-02 17.18.32.excalidraw.md",
     "Untitled.md",
+    "Pasted Image 20260501190235_303.png",
+    "Pasted Image 20260501190235_215.png",
+    "Excalidraw/Drawing 2026-04-30 21.32.45.excalidraw.md",
+    "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.md",
+    "Computação Quântica/anotacoes.excalidraw",
+    "Computação Quântica/QCLista1-questions.pdf",
+    "Computação Quântica/An Introduction to Quantum Computing",
+    "Pasted Image 20260501190235_309.png",
+    "Pasted Image 20260501190235_296.png",
     "Untitled.base",
+    "Untitled 1.base",
     "Drawing 2026-04-13 08.08.47.excalidraw.md",
     "anotacoes.md",
-    "Computação Quântica/anotacoes.excalidraw",
     "Screenshot from 2026-05-01 16-15-21.png",
     "Screenshot from 2026-05-01 16-15-02.png",
     "Screenshot from 2026-05-01 16-06-17.png",
     "Screenshot from 2026-05-01 15-29-58.png",
     "Screenshot from 2026-05-01 15-26-46.png",
     "Computação Quântica/1_Lista.excalidraw.md",
-    "Excalidraw/Drawing 2026-04-30 21.32.45.excalidraw.md",
     "Excalidraw",
-    "Computação Quântica/QCLista1-questions.pdf",
     "Construção de Compiladores/anotacoes.excalidraw",
     "Construção de Compiladores/llvm_tutorials/e4.ll~",
     "Construção de Compiladores/llvm_tutorials/e4.rs~",
     "Construção de Compiladores/llvm_tutorials/e4.ll",
-    "Construção de Compiladores/llvm_tutorials/e4.rs",
     "Computação Quântica/anotacoes.excalidraw.md",
     "Computação Quântica/anotacoes.md",
     "Excalidraw/Drawing 2026-03-20 19.48.34.excalidraw.md",
