@@ -4,11 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "30bc670bf974527b",
+        "id": "0d36d8dd081faa4a",
         "type": "tabs",
         "children": [
           {
-            "id": "1555968fe78a79bc",
+            "id": "d50c70838e161141",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "4 A QUANTUM MODEL OF COMPUTATION"
+            }
+          },
+          {
+            "id": "1b3113a7fed64811",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
@@ -76,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e83389665cd2b1dc",
@@ -182,16 +195,18 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "1555968fe78a79bc",
+  "active": "d50c70838e161141",
   "lastOpenFiles": [
+    "Drawing 2026-05-03 19.01.50.excalidraw.md",
     "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md",
-    "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.md",
     "Drawing 2026-05-02 17.18.32.excalidraw.md",
+    "Drawing 2026-04-13 08.08.47.excalidraw.md",
+    "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.md",
+    "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.md",
     "Untitled.md",
     "Pasted Image 20260501190235_303.png",
     "Pasted Image 20260501190235_215.png",
     "Excalidraw/Drawing 2026-04-30 21.32.45.excalidraw.md",
-    "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.md",
     "Computação Quântica/anotacoes.excalidraw",
     "Computação Quântica/QCLista1-questions.pdf",
     "Computação Quântica/An Introduction to Quantum Computing",
@@ -199,7 +214,6 @@
     "Pasted Image 20260501190235_296.png",
     "Untitled.base",
     "Untitled 1.base",
-    "Drawing 2026-04-13 08.08.47.excalidraw.md",
     "anotacoes.md",
     "Screenshot from 2026-05-01 16-15-21.png",
     "Screenshot from 2026-05-01 16-15-02.png",
