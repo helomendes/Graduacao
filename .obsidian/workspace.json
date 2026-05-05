@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0d36d8dd081faa4a",
+        "id": "67d4f586b64d1296",
         "type": "tabs",
         "children": [
           {
-            "id": "d50c70838e161141",
+            "id": "396f92d9eac91562",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
@@ -20,15 +20,15 @@
             }
           },
           {
-            "id": "1b3113a7fed64811",
+            "id": "9a382865140f000a",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.md"
+                "file": "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.md"
               },
               "icon": "excalidraw-icon",
-              "title": "3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS"
+              "title": "1 INTRODUCTION AND BACKGROUND"
             }
           }
         ]
@@ -195,14 +195,14 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "d50c70838e161141",
+  "active": "396f92d9eac91562",
   "lastOpenFiles": [
-    "Drawing 2026-05-03 19.01.50.excalidraw.md",
+    "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.md",
     "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md",
+    "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.md",
+    "Drawing 2026-05-03 19.01.50.excalidraw.md",
     "Drawing 2026-05-02 17.18.32.excalidraw.md",
     "Drawing 2026-04-13 08.08.47.excalidraw.md",
-    "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.md",
-    "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.md",
     "Untitled.md",
     "Pasted Image 20260501190235_303.png",
     "Pasted Image 20260501190235_215.png",
