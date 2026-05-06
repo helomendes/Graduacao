@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "396f92d9eac91562",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "4 A QUANTUM MODEL OF COMPUTATION"
-            }
-          },
-          {
             "id": "9a382865140f000a",
             "type": "leaf",
             "state": {
@@ -30,8 +18,33 @@
               "icon": "excalidraw-icon",
               "title": "1 INTRODUCTION AND BACKGROUND"
             }
+          },
+          {
+            "id": "881b091379b47c28",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS"
+            }
+          },
+          {
+            "id": "396f92d9eac91562",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "4 A QUANTUM MODEL OF COMPUTATION"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -88,8 +101,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e83389665cd2b1dc",
@@ -197,10 +209,16 @@
   },
   "active": "396f92d9eac91562",
   "lastOpenFiles": [
-    "Screenshot from 2026-05-05 15-33-54.png",
-    "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md",
-    "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.md",
+    "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.pdf",
     "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.md",
+    "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.pdf",
+    "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.md",
+    "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.pdf",
+    "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md",
+    "Computação Quântica/QCLista4-questions.pdf",
+    "Computação Quântica/QCLista3-questions.pdf",
+    "Computação Quântica/QCLista2-questions.pdf",
+    "Screenshot from 2026-05-05 15-33-54.png",
     "Drawing 2026-05-03 19.01.50.excalidraw.md",
     "Drawing 2026-05-02 17.18.32.excalidraw.md",
     "Drawing 2026-04-13 08.08.47.excalidraw.md",
@@ -222,11 +240,6 @@
     "Screenshot from 2026-05-01 15-29-58.png",
     "Screenshot from 2026-05-01 15-26-46.png",
     "Computação Quântica/1_Lista.excalidraw.md",
-    "Excalidraw",
-    "Construção de Compiladores/anotacoes.excalidraw",
-    "Construção de Compiladores/llvm_tutorials/e4.ll~",
-    "Construção de Compiladores/llvm_tutorials/e4.rs~",
-    "Construção de Compiladores/llvm_tutorials/e4.ll",
     "Computação Quântica/anotacoes.excalidraw.md",
     "Computação Quântica/anotacoes.md",
     "Excalidraw/Drawing 2026-03-20 19.48.34.excalidraw.md",
