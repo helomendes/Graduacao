@@ -4,47 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "67d4f586b64d1296",
+        "id": "c6472f2399949d05",
         "type": "tabs",
         "children": [
           {
-            "id": "9a382865140f000a",
+            "id": "3b944639f48837d0",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.md"
+                "file": "Evolução Molecular/anotacoes.excalidraw"
               },
               "icon": "excalidraw-icon",
-              "title": "1 INTRODUCTION AND BACKGROUND"
+              "title": "anotacoes"
             }
           },
           {
-            "id": "881b091379b47c28",
+            "id": "b5dada2d8f896340",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.md"
+                "file": "Evolução Molecular/GenômicaEvolutiva.md"
               },
               "icon": "excalidraw-icon",
-              "title": "3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS"
-            }
-          },
-          {
-            "id": "396f92d9eac91562",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "4 A QUANTUM MODEL OF COMPUTATION"
+              "title": "GenômicaEvolutiva"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -101,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e83389665cd2b1dc",
@@ -207,14 +196,19 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "396f92d9eac91562",
+  "active": "b5dada2d8f896340",
   "lastOpenFiles": [
+    "Screenshot from 2026-05-12 18-33-50.png",
+    "Genômica Evolutiva.md",
+    "Evolução Molecular/GenômicaEvolutiva.md",
+    "Evolução Molecular/anotacoes.excalidraw",
+    "Evolução Molecular/Genômica Evolutiva",
+    "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md",
     "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.pdf",
     "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.md",
     "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.pdf",
     "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.md",
     "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.pdf",
-    "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md",
     "Computação Quântica/QCLista4-questions.pdf",
     "Computação Quântica/QCLista3-questions.pdf",
     "Computação Quântica/QCLista2-questions.pdf",
@@ -222,17 +216,13 @@
     "Drawing 2026-05-03 19.01.50.excalidraw.md",
     "Drawing 2026-05-02 17.18.32.excalidraw.md",
     "Drawing 2026-04-13 08.08.47.excalidraw.md",
-    "Untitled.md",
     "Pasted Image 20260501190235_303.png",
     "Pasted Image 20260501190235_215.png",
     "Excalidraw/Drawing 2026-04-30 21.32.45.excalidraw.md",
     "Computação Quântica/anotacoes.excalidraw",
     "Computação Quântica/QCLista1-questions.pdf",
-    "Computação Quântica/An Introduction to Quantum Computing",
     "Pasted Image 20260501190235_309.png",
     "Pasted Image 20260501190235_296.png",
-    "Untitled.base",
-    "Untitled 1.base",
     "anotacoes.md",
     "Screenshot from 2026-05-01 16-15-21.png",
     "Screenshot from 2026-05-01 16-15-02.png",
