@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "9efec210898e9587",
+        "id": "c6472f2399949d05",
         "type": "tabs",
         "children": [
           {
-            "id": "f090fa70353292e7",
+            "id": "b5dada2d8f896340",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Evolução Molecular/genetica_de_populacoes.excalidraw"
+                "file": "Evolução Molecular/GenômicaEvolutiva.md"
               },
               "icon": "excalidraw-icon",
-              "title": "genetica_de_populacoes"
-            }
-          },
-          {
-            "id": "b24f1f1b13e1df44",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Evolução Molecular/genomica_evolutiva.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "genomica_evolutiva"
+              "title": "GenômicaEvolutiva"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -55,7 +42,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorador de arquivos"
             }
           },
           {
@@ -186,22 +173,23 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false,
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false,
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "b24f1f1b13e1df44",
+  "active": "b5dada2d8f896340",
   "lastOpenFiles": [
-    "Computação Quântica/aceite_mitacs.pdf",
-    "Computação Quântica/2025_Formulario-de-solicitacao-registro-em-mobilidade.pdf",
-    "Evolução Molecular/genetica_de_populacoes.excalidraw",
-    "Evolução Molecular/genomica_evolutiva.md",
+    "Evolução Molecular/anotacoes.excalidraw",
+    "Evolução Molecular/GenômicaEvolutiva.md",
+    "Screenshot from 2026-05-12 18-33-50.png",
+    "Genômica Evolutiva.md",
+    "Evolução Molecular/Genômica Evolutiva",
     "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md",
     "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.pdf",
     "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.md",
@@ -215,7 +203,6 @@
     "Drawing 2026-05-03 19.01.50.excalidraw.md",
     "Drawing 2026-05-02 17.18.32.excalidraw.md",
     "Drawing 2026-04-13 08.08.47.excalidraw.md",
-    "Untitled.md",
     "Pasted Image 20260501190235_303.png",
     "Pasted Image 20260501190235_215.png",
     "Excalidraw/Drawing 2026-04-30 21.32.45.excalidraw.md",
@@ -228,7 +215,6 @@
     "Screenshot from 2026-05-01 16-15-02.png",
     "Screenshot from 2026-05-01 16-06-17.png",
     "Screenshot from 2026-05-01 15-29-58.png",
-    "Screenshot from 2026-05-01 15-26-46.png",
     "Computação Quântica/1_Lista.excalidraw.md",
     "Computação Quântica/anotacoes.excalidraw.md",
     "Computação Quântica/anotacoes.md",
