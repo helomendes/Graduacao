@@ -18,8 +18,21 @@
               "icon": "excalidraw-icon",
               "title": "GenômicaEvolutiva"
             }
+          },
+          {
+            "id": "40694fdbc1503dc9",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "4 A QUANTUM MODEL OF COMPUTATION"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -183,10 +196,10 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "b5dada2d8f896340",
+  "active": "40694fdbc1503dc9",
   "lastOpenFiles": [
-    "Evolução Molecular/anotacoes.excalidraw",
     "Evolução Molecular/GenômicaEvolutiva.md",
+    "Evolução Molecular/anotacoes.excalidraw",
     "Screenshot from 2026-05-12 18-33-50.png",
     "Genômica Evolutiva.md",
     "Evolução Molecular/Genômica Evolutiva",
