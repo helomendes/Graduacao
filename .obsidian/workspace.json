@@ -4,47 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "67d4f586b64d1296",
+        "id": "9efec210898e9587",
         "type": "tabs",
         "children": [
           {
-            "id": "9a382865140f000a",
+            "id": "f090fa70353292e7",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.md"
+                "file": "Evolução Molecular/genetica_de_populacoes.excalidraw"
               },
               "icon": "excalidraw-icon",
-              "title": "1 INTRODUCTION AND BACKGROUND"
+              "title": "genetica_de_populacoes"
             }
           },
           {
-            "id": "881b091379b47c28",
+            "id": "b24f1f1b13e1df44",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.md"
+                "file": "Evolução Molecular/genomica_evolutiva.md"
               },
               "icon": "excalidraw-icon",
-              "title": "3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS"
-            }
-          },
-          {
-            "id": "396f92d9eac91562",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "4 A QUANTUM MODEL OF COMPUTATION"
+              "title": "genomica_evolutiva"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -101,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e83389665cd2b1dc",
@@ -207,14 +196,18 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "396f92d9eac91562",
+  "active": "b24f1f1b13e1df44",
   "lastOpenFiles": [
+    "Computação Quântica/aceite_mitacs.pdf",
+    "Computação Quântica/2025_Formulario-de-solicitacao-registro-em-mobilidade.pdf",
+    "Evolução Molecular/genetica_de_populacoes.excalidraw",
+    "Evolução Molecular/genomica_evolutiva.md",
+    "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md",
     "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.pdf",
     "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.md",
     "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.pdf",
     "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.md",
     "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.pdf",
-    "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md",
     "Computação Quântica/QCLista4-questions.pdf",
     "Computação Quântica/QCLista3-questions.pdf",
     "Computação Quântica/QCLista2-questions.pdf",
@@ -228,11 +221,8 @@
     "Excalidraw/Drawing 2026-04-30 21.32.45.excalidraw.md",
     "Computação Quântica/anotacoes.excalidraw",
     "Computação Quântica/QCLista1-questions.pdf",
-    "Computação Quântica/An Introduction to Quantum Computing",
     "Pasted Image 20260501190235_309.png",
     "Pasted Image 20260501190235_296.png",
-    "Untitled.base",
-    "Untitled 1.base",
     "anotacoes.md",
     "Screenshot from 2026-05-01 16-15-21.png",
     "Screenshot from 2026-05-01 16-15-02.png",
