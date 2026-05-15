@@ -11,10 +11,12 @@
             "id": "1c3e8f0db21c2170",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nova aba"
+              "type": "excalidraw",
+              "state": {
+                "file": "Evolução Molecular/EvolucaoEmConcerto.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "EvolucaoEmConcerto"
             }
           }
         ]
@@ -74,7 +76,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e83389665cd2b1dc",
