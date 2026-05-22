@@ -4,19 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "4a00f2507cd10c65",
+        "id": "44b4c5571bfb7c4c",
         "type": "tabs",
         "children": [
           {
-            "id": "1c3e8f0db21c2170",
+            "id": "10ded2c1b4b745bd",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Evolução Molecular/EvolucaoEmConcerto.md"
+                "file": "Evolução Molecular/ListaExercicios.md"
               },
               "icon": "excalidraw-icon",
-              "title": "EvolucaoEmConcerto"
+              "title": "ListaExercicios"
             }
           }
         ]
@@ -42,7 +42,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Explorador de arquivos"
+              "title": "Files"
             }
           },
           {
@@ -76,8 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e83389665cd2b1dc",
@@ -173,33 +172,41 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir a troca rápida": false,
-      "graph:Abrir visualização em gráfico": false,
-      "canvas:Criar novo canvas": false,
-      "daily-notes:Abrir a nota de hoje": false,
-      "templates:Inserir modelo": false,
-      "command-palette:Abrir paleta de comandos": false,
-      "bases:Criar nova base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "1c3e8f0db21c2170",
+  "active": "10ded2c1b4b745bd",
   "lastOpenFiles": [
-    "Evolução Molecular/genetica_de_populacoes.excalidraw",
-    "Evolução Molecular/GenômicaEvolutiva.md",
-    "Evolução Molecular/genomica_evolutiva.md",
-    "Evolução Molecular/EvolucaoEmConcerto.md",
+    "Screenshot from 2026-05-21 23-32-04.png",
+    "Screenshot from 2026-05-21 23-31-40.png",
+    "Screenshot from 2026-05-21 23-28-33.png",
+    "Screenshot from 2026-05-21 23-28-10.png",
+    "Screenshot from 2026-05-21 23-27-56.png",
+    "Screenshot from 2026-05-21 23-27-41.png",
+    "Screenshot from 2026-05-21 23-27-25.png",
+    "Evolução Molecular/ListaExercicios.md",
     "Evolução Molecular/GenesOrtologosEParalogos.md",
+    "Evolução Molecular/GenômicaEvolutiva.md",
+    "Evolução Molecular/EvolucaoEmConcerto.md",
     "Captura de tela de 2026-05-15 14-06-53.png",
-    "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.md",
-    "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.md",
+    "Evolução Molecular/genetica_de_populacoes.excalidraw",
     "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.md",
+    "Computação Quântica/Análise e caracterização de elementos de transposição.pdf",
     "Evolução Molecular/anotacoes.excalidraw",
     "Screenshot from 2026-05-12 18-33-50.png",
     "Genômica Evolutiva.md",
     "Evolução Molecular/Genômica Evolutiva",
     "Computação Quântica/An Introduction to Quantum Computing/4 A QUANTUM MODEL OF COMPUTATION.pdf",
+    "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.md",
     "Computação Quântica/An Introduction to Quantum Computing/3 QUBITS AND THE FRAMEWORK OF QUANTUM MECHANICS.pdf",
+    "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.md",
     "Computação Quântica/An Introduction to Quantum Computing/1 INTRODUCTION AND BACKGROUND.pdf",
     "Computação Quântica/QCLista4-questions.pdf",
     "Computação Quântica/QCLista3-questions.pdf",
@@ -209,16 +216,8 @@
     "Drawing 2026-05-02 17.18.32.excalidraw.md",
     "Drawing 2026-04-13 08.08.47.excalidraw.md",
     "Pasted Image 20260501190235_303.png",
-    "Pasted Image 20260501190235_215.png",
     "Excalidraw/Drawing 2026-04-30 21.32.45.excalidraw.md",
-    "Computação Quântica/anotacoes.excalidraw",
-    "Computação Quântica/QCLista1-questions.pdf",
-    "Pasted Image 20260501190235_309.png",
-    "Pasted Image 20260501190235_296.png",
     "anotacoes.md",
-    "Screenshot from 2026-05-01 16-15-21.png",
-    "Screenshot from 2026-05-01 16-15-02.png",
-    "Screenshot from 2026-05-01 16-06-17.png",
     "Computação Quântica/1_Lista.excalidraw.md",
     "Computação Quântica/anotacoes.excalidraw.md",
     "Computação Quântica/anotacoes.md",
