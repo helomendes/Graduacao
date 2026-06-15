@@ -8,29 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3b944639f48837d0",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "b5dada2d8f896340",
+            "id": "d9d55559ec04cfbd",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Evolução Molecular/ListaExercicios.md"
+                "file": "Evolução Molecular/Filogenética.md"
               },
               "icon": "excalidraw-icon",
-              "title": "ListaExercicios"
+              "title": "Filogenética"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -53,7 +42,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorador de arquivos"
             }
           },
           {
@@ -184,18 +173,20 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false,
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false,
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "b5dada2d8f896340",
+  "active": "d9d55559ec04cfbd",
   "lastOpenFiles": [
+    "Evolução Molecular/ListaExercicios.md",
+    "Evolução Molecular/Filogenética.md",
     "Evolução Molecular/EvolucaoEmConcerto.md",
     "Evolução Molecular/GenômicaEvolutiva.md",
     "Screenshot from 2026-05-21 23-32-04.png",
@@ -206,7 +197,6 @@
     "Screenshot from 2026-05-21 23-27-41.png",
     "Screenshot from 2026-05-21 23-27-25.png",
     "Evolução Molecular/genetica_de_populacoes.excalidraw",
-    "Evolução Molecular/ListaExercicios.md",
     "Evolução Molecular/GenesOrtologosEParalogos.md",
     "Captura de tela de 2026-05-15 14-06-53.png",
     "Screenshot from 2026-05-12 18-33-50.png",
